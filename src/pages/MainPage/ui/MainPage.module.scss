@@ -1,0 +1,57 @@
+.wrapper {
+
+}
+
+.contentCard {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.text {
+    font: var(--font-xxl);
+    font-weight: var(--weigth-size-500);
+    width: 300px;
+}
+
+.button {
+    padding: 12px 24px;
+    margin-top: 55px;
+    font-weight: var(--weigth-size-500);
+}
+
+.imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image {
+    display: inline-flex;
+    width: 438px;
+    height: 452px;
+
+    image {
+        display: inline-flex;
+    }
+}
+
+.textOnImage {
+    position: absolute;
+    left: -20px;
+    bottom: 240px;
+    width: 200px;
+    font: var(--font-xxl);
+    font-weight: var(--weigth-size-700);
+}
+
+.numberOfImage {
+    position: absolute;
+    left: -20px;
+    top: 75px;
+    width: 200px;
+    font: var(--font-xl);
+}
