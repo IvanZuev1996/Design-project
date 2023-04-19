@@ -1,19 +1,44 @@
 .wrapper {
-
+    padding: 0 100px;
 }
 
 .contentCard {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 200px;
-    align-items: center;
-    margin-top: 80px;
+    align-items: flex-start;
+    margin-top: 90px;
 }
 
 .text {
     font: var(--font-xxl);
     font-weight: var(--weigth-size-500);
     width: 300px;
+}
+
+.logoText {
+    font: var(--font-l);
+    opacity: 0.7;
+    margin-bottom: 18px;
+}
+
+.paginationDots {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 12px;
+    margin-top: 90px;
+    padding-left: 20px;
+
+    span {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+    }
+
+    .active {
+    }
 }
 
 .button {
@@ -27,6 +52,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    scale: 1.15;
 }
 
 .image {
