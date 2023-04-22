@@ -1,3 +1,4 @@
+import path from 'path';
 import webpack, { RuleSetRule } from 'webpack';
 import { buildBabelLoader } from './loaders/buildBabelLoader';
 import { buildCssLoader } from './loaders/buildCssLoader';

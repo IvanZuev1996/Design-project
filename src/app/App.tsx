@@ -8,13 +8,13 @@ function App() {
 
     const changeState = () => {
         setState((prev) => !prev);
-    }
-    
+    };
+
     return (
         <div className={classNames('app', {}, [])}>
             <Suspense fallback="">
-                <div className={classNames('content-page', {'activeMenu': state}, [])}>
-                    <Navbar state={state} changeState={changeState}/>
+                <div className={classNames('content-page')}>
+                    <Navbar />
                     <AppRouter />
                 </div>
             </Suspense>

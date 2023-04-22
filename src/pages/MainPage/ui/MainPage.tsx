@@ -3,12 +3,16 @@ import { Page } from 'widgets/Page/Page';
 import Image1 from 'shared/assets/icons/design1.svg';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import cls from './MainPage.module.scss';
+import { AboutSection } from './AboutSection/AboutSection';
+import { HeaderSection } from './HeaderSection/HeaderSection';
 
 const MainPage = memo(() => {
     const f = 1;
     return (
-        <Page className={cls.wrapper}>
-            <div className={cls.contentCard}>
+        <Page>
+            <HeaderSection />
+            <AboutSection />
+            {/* <div className={cls.contentCard}>
                 <div className={cls.textBlock}>
                     <p className={cls.logoText}>OurDesign</p>
                     <p className={cls.text}>
@@ -28,7 +32,7 @@ const MainPage = memo(() => {
                     <p className={cls.textOnImage}>Графический дизайн</p>
                     <Image1 className={cls.image} />
                 </div>
-            </div>
+            </div> */}
         </Page>
     );
 });

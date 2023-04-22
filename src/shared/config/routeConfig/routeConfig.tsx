@@ -10,6 +10,9 @@ export type AppRouteProps = RouteProps & {
 export enum AppRoutes {
     MAIN = 'main',
     ABOUT = 'about',
+    PORTFOLIO = 'portfolio',
+    SERVICES = 'services',
+    CONTACTS = 'contacts',
     // last page
     NOT_FOUND = 'not_found'
 }
@@ -17,6 +20,9 @@ export enum AppRoutes {
 export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',
     [AppRoutes.ABOUT]: '/about',
+    [AppRoutes.CONTACTS]: '/contacts',
+    [AppRoutes.PORTFOLIO]: '/portfolio',
+    [AppRoutes.SERVICES]: '/services',
     // Последний маршрут отрабатывает в случае если ни один из других маршрутов не отработал
     [AppRoutes.NOT_FOUND]: '*'
 };
@@ -28,6 +34,18 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     },
     [AppRoutes.ABOUT]: {
         path: RoutePath.about,
+        element: <AboutPage />
+    },
+    [AppRoutes.CONTACTS]: {
+        path: RoutePath.contacts,
+        element: <AboutPage />
+    },
+    [AppRoutes.PORTFOLIO]: {
+        path: RoutePath.portfolio,
+        element: <AboutPage />
+    },
+    [AppRoutes.SERVICES]: {
+        path: RoutePath.services,
         element: <AboutPage />
     },
     // last route
