@@ -1,0 +1,80 @@
+.detailsWrapper {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.ServiceDetails {
+}
+
+.image {
+    border-radius: 15px;
+    max-width: 60vw;
+    height: 100%;
+
+    @media screen and (max-width: 1200px) {
+        max-width: 90vw;
+        height: 100%;
+    }
+}
+
+.textBlock {
+    h2 {
+        text-align: center;
+        font: var(--font-xl);
+        font-weight: var(--weigth-size-700);
+    }
+
+    p {
+        margin-top: 10px;
+    }
+
+    font: var(--font-m);
+}
+
+.linksBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        a {
+            margin-left: 15px;
+            cursor: pointer;
+            font: var(--font-xl);
+            color: var(--additional-color);
+        }
+    }
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.tags {
+    display: flex;
+    gap: 20px;
+
+    .tag {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: var(--additional-color-light);
+        color: #000;
+        font-weight: 800;
+        transition: all 0.1s ease-in;
+        margin: 0.5rem;
+
+        &:hover {
+            scale: 1.1;
+        }
+
+        @media screen and (min-width: 2000px) {
+            padding: 1rem 2rem;
+            border-radius: 0.85rem;
+        }
+    }
+}

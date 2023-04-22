@@ -1,6 +1,7 @@
 import { AboutPage } from 'pages/AboutPage';
 import { MainPage } from 'pages/MainPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
+import { ServiceDetails } from 'pages/ServiceDetailsPage/ServiceDetailsPage';
 import { RouteProps } from 'react-router-dom';
 
 export type AppRouteProps = RouteProps & {
@@ -13,6 +14,7 @@ export enum AppRoutes {
     PORTFOLIO = 'portfolio',
     SERVICES = 'services',
     CONTACTS = 'contacts',
+    SERVICE_DETAILS = 'service_details',
     // last page
     NOT_FOUND = 'not_found'
 }
@@ -23,6 +25,7 @@ export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.CONTACTS]: '/contacts',
     [AppRoutes.PORTFOLIO]: '/portfolio',
     [AppRoutes.SERVICES]: '/services',
+    [AppRoutes.SERVICE_DETAILS]: '/services/', // + :id
     // Последний маршрут отрабатывает в случае если ни один из других маршрутов не отработал
     [AppRoutes.NOT_FOUND]: '*'
 };
@@ -47,6 +50,10 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     [AppRoutes.SERVICES]: {
         path: RoutePath.services,
         element: <AboutPage />
+    },
+    [AppRoutes.SERVICE_DETAILS]: {
+        path: `${RoutePath.service_details}:id`,
+        element: <ServiceDetails />
     },
     // last route
     [AppRoutes.NOT_FOUND]: {

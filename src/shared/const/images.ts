@@ -37,9 +37,18 @@ import asus from 'shared/assets/images/asus.png';
 import bolt from 'shared/assets/images/bolt.png';
 import nb from 'shared/assets/images/nb.png';
 import skype from 'shared/assets/images/skype.png';
+
+import web from 'shared/assets/images/web.jpg';
+import design from 'shared/assets/images/design.png';
+import createLogo from 'shared/assets/images/createLogo.png';
+import accounts from 'shared/assets/images/accounts.png';
 import headerImage from '../assets/icons/design1.svg';
 
 export const images = {
+    web,
+    design,
+    createLogo,
+    accounts,
     email,
     mobile,
     api,

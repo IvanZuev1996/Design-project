@@ -4,6 +4,12 @@ export default {
     type: 'document',
     fields: [
       {
+        name: 'id',
+        title: 'Id',
+        type: 'string',
+      },
+
+      {
         name: 'title',
         title: 'Title',
         type: 'string',
@@ -15,13 +21,8 @@ export default {
         type: 'string',
       },
       {
-        name: 'projectLink',
-        title: 'Project Link',
-        type: 'string',
-      },
-      {
-        name: 'codeLink',
-        title: 'Code Link',
+        name: 'figmaLink',
+        title: 'Figma Link',
         type: 'string',
       },
       {
@@ -32,7 +33,6 @@ export default {
           hotspot: true,
         },
       },
-   
       {
         name: 'tags',
         title: 'Tags',

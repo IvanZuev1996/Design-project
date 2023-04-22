@@ -2,6 +2,7 @@ import { classNames } from 'shared/lib/helpers/classNames';
 import { motion, MotionProps, Variants } from 'framer-motion';
 import { images } from 'shared/const';
 import 'app/styles/index.scss';
+import AppWrap from 'widgets/AppWrap/AppWrap';
 import cls from './HeaderSection.module.scss';
 
 interface HeaderSectionProps {
@@ -13,13 +14,13 @@ const scaleVariants: MotionProps = {
         scale: [0, 1],
         opacity: [0, 1],
         transition: {
-            duration: 1,
+            duration: 0.6,
             ease: 'easeInOut'
         }
     }
 };
 
-export const HeaderSection = ({ className }: HeaderSectionProps) => {
+const HeaderSection = ({ className }: HeaderSectionProps) => {
     const technologys: string[] = [
         images.figma,
         images.photoshop,
@@ -80,3 +81,5 @@ export const HeaderSection = ({ className }: HeaderSectionProps) => {
         </section>
     );
 };
+
+export default AppWrap(HeaderSection, '');

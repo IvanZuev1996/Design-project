@@ -6,6 +6,7 @@ import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
+import { useParams } from 'react-router-dom';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {

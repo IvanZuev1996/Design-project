@@ -3,12 +3,12 @@
     justify-content: space-between;
     align-items: center;
     height: var(--navbar-height);
-    width: 80vw;
-    padding: 0 15px;
+    width: 100vw;
+    padding: 50px 100px 30px;
     font: var(--font-s);
-    position: fixed;
     backdrop-filter: blur(4px);
     z-index: 100;
+    position: fixed;
 }
 
 .left {
