@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/helpers/classNames';
-import { motion, MotionProps, Variants } from 'framer-motion';
+import { motion, MotionProps } from 'framer-motion';
 import { images } from 'shared/const';
 import 'app/styles/index.scss';
 import AppWrap from 'widgets/AppWrap/AppWrap';
@@ -58,7 +58,7 @@ const HeaderSection = ({ className }: HeaderSectionProps) => {
                 transition={{ duration: 0.8, delayChildren: 0.5 }}
                 className={cls.mainImage}
             >
-                <images.headerImage />
+                <img src={images.mainPhoto} alt="desig" className="" />
                 <motion.img
                     whileInView={{ scale: [0, 0.5] }}
                     transition={{ duration: 1, ease: 'easeInOut' }}

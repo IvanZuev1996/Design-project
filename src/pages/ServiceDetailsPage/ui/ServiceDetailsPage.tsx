@@ -12,18 +12,29 @@ interface ServiceDetailsProps {
     className?: string;
 }
 
-export const ServiceDetails = ({ className }: ServiceDetailsProps) => {
+const ServiceDetails = ({ className }: ServiceDetailsProps) => {
     const [card, setCard] = useState<Work | undefined>(undefined);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const { id } = useParams<{ id: string }>();
 
     useEffect(() => {
         const query = `*[_id == "${id}"]`;
+        setIsLoading(true);
 
         client.fetch<Work[]>(query).then((data) => {
             setCard(data[0]);
+            setIsLoading(false);
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
+    const validate = (title: string | undefined) => {
+        if (title && !isLoading) {
+            return title
+        } else if (!title && !isLoading) {
+            return 'К сожалению, такого проекта не существует'
+        }
+    }
 
     return (
         <LazyMotion features={domAnimation}>
@@ -34,8 +45,9 @@ export const ServiceDetails = ({ className }: ServiceDetailsProps) => {
                     className={cls.textBlock}
                 >
                     <h2>
-                        {card?.title ||
-                            'К сожалению, такого проекта не существует'}
+                        {
+                            validate(card?.title)
+                        }
                     </h2>
                     <p>{card?.description || ''}</p>
                 </m.div>
@@ -81,6 +93,7 @@ export const ServiceDetails = ({ className }: ServiceDetailsProps) => {
                             whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                             transition={{ duration: 0.5 }}
                             className={cls.tag}
+                            key={index}
                         >
                             {item}
                         </m.div>
@@ -90,3 +103,5 @@ export const ServiceDetails = ({ className }: ServiceDetailsProps) => {
         </LazyMotion>
     );
 };
+
+export default ServiceDetails;

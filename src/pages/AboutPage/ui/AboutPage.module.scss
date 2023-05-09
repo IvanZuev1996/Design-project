@@ -1,0 +1,50 @@
+.wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--navbar-height);
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    margin-top: calc(var(--navbar-height) + 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        width: 25%;
+        overflow: visible;
+        object-fit: contain;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+
+        @media screen and (max-width: 1700px) {
+            width: 35%;
+        }
+
+        @media screen and (max-width: 1500px) {
+            width: 45%;
+        }
+
+        @media screen and (max-width: 1000px) {
+            width: 55%;
+        }
+
+        @media screen and (max-width: 550px) {
+            width: 70%;
+        }
+    }
+
+    h1 { 
+        width: min-content;   
+        font-size: 10vw;
+        font-weight: var(--weigth-size-800);
+        line-height: 100%;
+        color: #F3F3F3;
+        user-select: none;
+    }
+}

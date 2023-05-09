@@ -70,7 +70,7 @@ const WorksSection = () => {
                 transition={{ duration: 0.5, delayChildren: 0.5 }}
                 className={cls.portfolio}
             >
-                {filterWork.slice(0, 8).map((work, index) => (
+                {filterWork.slice(0, 10).map((work, index) => (
                     <motion.div
                         key={index}
                         whileHover={{ scale: [1, 1.06] }}
@@ -96,7 +96,6 @@ const WorksSection = () => {
                                 >
                                     <AppLink
                                         to={`${RoutePath.service_details}${work._id}`}
-                                        target="_blank"
                                         rel="noreferrer"
                                     >
                                         <motion.div

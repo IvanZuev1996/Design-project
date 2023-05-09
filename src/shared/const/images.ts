@@ -42,6 +42,8 @@ import web from 'shared/assets/images/web.jpg';
 import design from 'shared/assets/images/design.png';
 import createLogo from 'shared/assets/images/createLogo.png';
 import accounts from 'shared/assets/images/accounts.png';
+import aboutPhoto from '../assets/images/aboutPhoto.svg';
+import mainPhoto from '../assets/images/mainPhoto.png';
 import headerImage from '../assets/icons/design1.svg';
 
 export const images = {
@@ -85,5 +87,7 @@ export const images = {
     headerImage,
     photoshop,
     illustator,
-    bg
+    bg,
+    mainPhoto,
+    aboutPhoto
 };

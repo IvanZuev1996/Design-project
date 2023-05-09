@@ -1,7 +1,7 @@
 import { AboutPage } from 'pages/AboutPage';
 import { MainPage } from 'pages/MainPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
-import { ServiceDetails } from 'pages/ServiceDetailsPage/ServiceDetailsPage';
+import { ServiceDetailsPage } from 'pages/ServiceDetailsPage';
 import { RouteProps } from 'react-router-dom';
 
 export type AppRouteProps = RouteProps & {
@@ -53,7 +53,7 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     },
     [AppRoutes.SERVICE_DETAILS]: {
         path: `${RoutePath.service_details}:id`,
-        element: <ServiceDetails />
+        element: <ServiceDetailsPage />
     },
     // last route
     [AppRoutes.NOT_FOUND]: {
