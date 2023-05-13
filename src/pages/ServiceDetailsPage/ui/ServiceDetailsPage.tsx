@@ -1,6 +1,6 @@
 import { client, urlFor } from 'client';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { images } from 'shared/const';
 import { classNames } from 'shared/lib/helpers/classNames';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
@@ -30,11 +30,14 @@ const ServiceDetails = ({ className }: ServiceDetailsProps) => {
 
     const validate = (title: string | undefined) => {
         if (title && !isLoading) {
-            return title
-        } else if (!title && !isLoading) {
-            return 'К сожалению, такого проекта не существует'
+            return title;
         }
-    }
+        if (!title && !isLoading) {
+            return 'К сожалению, такого проекта не существует';
+        }
+
+        return '';
+    };
 
     return (
         <LazyMotion features={domAnimation}>
@@ -44,11 +47,7 @@ const ServiceDetails = ({ className }: ServiceDetailsProps) => {
                     transition={{ duration: 0.5 }}
                     className={cls.textBlock}
                 >
-                    <h2>
-                        {
-                            validate(card?.title)
-                        }
-                    </h2>
+                    <h2>{validate(card?.title)}</h2>
                     <p>{card?.description || ''}</p>
                 </m.div>
                 <m.div
@@ -78,7 +77,9 @@ const ServiceDetails = ({ className }: ServiceDetailsProps) => {
                     >
                         <h2>
                             Смотрите наш проект в
-                            <a href={card.figmaLink}>Figma!</a>
+                            <Link to={card.figmaLink} target="_blank">
+                                Figma!
+                            </Link>
                         </h2>
                         <img
                             src={images.figma}

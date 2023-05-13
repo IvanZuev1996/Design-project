@@ -1,6 +1,9 @@
 import { AboutPage } from 'pages/AboutPage';
+import { ContactPage } from 'pages/ContactPage';
 import { MainPage } from 'pages/MainPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
+import { PortfolioPage } from 'pages/PortfolioPage';
+import { PricePage } from 'pages/PricePage';
 import { ServiceDetailsPage } from 'pages/ServiceDetailsPage';
 import { RouteProps } from 'react-router-dom';
 
@@ -41,15 +44,15 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     },
     [AppRoutes.CONTACTS]: {
         path: RoutePath.contacts,
-        element: <AboutPage />
+        element: <ContactPage />
     },
     [AppRoutes.PORTFOLIO]: {
         path: RoutePath.portfolio,
-        element: <AboutPage />
+        element: <PortfolioPage />
     },
     [AppRoutes.SERVICES]: {
         path: RoutePath.services,
-        element: <AboutPage />
+        element: <PricePage />
     },
     [AppRoutes.SERVICE_DETAILS]: {
         path: `${RoutePath.service_details}:id`,

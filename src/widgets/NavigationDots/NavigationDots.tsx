@@ -11,23 +11,27 @@ interface NavigationDotsProps {
 const navbarLinks = [
     {
         title: 'Home',
-        path: RoutePath.main
+        path: ''
     },
     {
         title: 'Мы',
-        path: RoutePath.about
+        path: 'about'
     },
     {
         title: 'Портфолио',
-        path: RoutePath.portfolio
+        path: 'portfolio'
     },
     {
         title: 'Услуги и цены',
-        path: RoutePath.services
+        path: 'services'
+    },
+    {
+        title: 'Отзывы',
+        path: 'testimonials'
     },
     {
         title: 'Контакты',
-        path: RoutePath.contacts
+        path: 'contact'
     }
 ];
 
@@ -35,13 +39,11 @@ export const NavigationDots = ({ active }: NavigationDotsProps) => (
     <div className="app__navigation">
         {navbarLinks.map((item, index) => (
             <a
-                href={`#${item.path.slice(1)}`}
+                href={`#${item.path}`}
                 key={item.path + index}
                 className="app__navigation-dot"
                 style={
-                    active === item.path.slice(1)
-                        ? { backgroundColor: '#313BAC' }
-                        : {}
+                    active === item.path ? { backgroundColor: '#313BAC' } : {}
                 }
             />
         ))}

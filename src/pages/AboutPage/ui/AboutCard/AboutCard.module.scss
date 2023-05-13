@@ -1,0 +1,19 @@
+.card {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+
+    div {
+        color: red;
+        font: var(--font-l);
+        font-weight: var(--weigth-size-800);
+    }
+
+    h2 {
+        font: var(--font-xxl);
+        font-weight: var(--weigth-size-800);
+    }
+}

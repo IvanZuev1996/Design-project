@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { client, urlFor } from 'client';
 import AppWrap from 'widgets/AppWrap/AppWrap';
+import MotionWrap from 'widgets/MotionWrap/MotionWrap';
 import cls from './AboutSection.module.scss';
 
 interface AboutSectionProps {
@@ -24,7 +25,7 @@ const AboutSection = ({ className }: AboutSectionProps) => {
     }, []);
 
     return (
-        <>
+        <div>
             <h2 className={cls.mainText}>
                 Нужен качественный дизайн?
                 <span>Обратись к нам!</span>
@@ -51,8 +52,8 @@ const AboutSection = ({ className }: AboutSectionProps) => {
                     </motion.div>
                 ))}
             </div>
-        </>
+        </div>
     );
 };
 
-export default AppWrap(AboutSection, 'about');
+export default AboutSection;

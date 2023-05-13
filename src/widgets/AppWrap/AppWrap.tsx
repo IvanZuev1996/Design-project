@@ -1,14 +1,9 @@
-import React, { ReactNode } from 'react';
 import { SocialMedia } from '../SocialMedia/SocialMedia';
 import { NavigationDots } from '../NavigationDots/NavigationDots';
 import 'app/styles/index.scss';
 
-interface Props {
-    className?: string;
-}
-
 export const AppWrap = (
-    Component: ({ className }: Props) => JSX.Element,
+    Component: (props: any) => JSX.Element,
     idName: string,
     classNames?: string
 ) =>

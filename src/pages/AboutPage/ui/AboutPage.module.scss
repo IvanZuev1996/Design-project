@@ -3,48 +3,53 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 100px;
     margin-top: var(--navbar-height);
+
+    h1 {
+        font-weight: var(--weigth-size-800);
+        line-height: 100%;
+        color: #c9c9c9;
+    }
 }
 
 .logo {
-    width: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
     height: 100%;
     margin-top: calc(var(--navbar-height) + 60px);
     display: flex;
     justify-content: center;
     align-items: center;
 
-    svg {
-        width: 25%;
-        overflow: visible;
-        object-fit: contain;
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-
-        @media screen and (max-width: 1700px) {
-            width: 35%;
-        }
-
-        @media screen and (max-width: 1500px) {
-            width: 45%;
-        }
-
-        @media screen and (max-width: 1000px) {
-            width: 55%;
-        }
-
-        @media screen and (max-width: 550px) {
-            width: 70%;
-        }
-    }
-
-    h1 { 
-        width: min-content;   
-        font-size: 10vw;
+    h1 {
         font-weight: var(--weigth-size-800);
         line-height: 100%;
-        color: #F3F3F3;
-        user-select: none;
+        color: #c9c9c9;
     }
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    @media screen and (max-width: 720px) {
+        width: 95%;
+        margin: 0;
+    }
+}
+
+.cards {
+    width: 90%;
+    flex: 4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 70px;
 }

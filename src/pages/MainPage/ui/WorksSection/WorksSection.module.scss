@@ -42,13 +42,24 @@
         }
     }
 
+    @media screen and (max-width: 720px) {
+        justify-content: center;
+    }
+
     .activeFilter {
         background-color: var(--additional-color);
         color: #fff;
     }
 }
 
+.figmaLink {
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+}
+
 .portfolio {
+    width: 80%;
     display: flex;
     gap: 45px;
     flex-wrap: wrap;
@@ -63,9 +74,10 @@
         height: 400px;
         width: 270px;
         flex-direction: column;
+        background-color: #fff;
+        border: 1px solid var(--additional-color-light);
         padding: 1rem;
         border-radius: 0.5rem;
-        background-color: #fff;
         color: #000;
         transition: all 0.1s ease-in-out;
 

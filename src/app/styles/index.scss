@@ -83,6 +83,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+    margin-right: 5%;
 
     p {
         text-transform: uppercase;
@@ -143,7 +144,7 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 0;
-    margin-left: 10px;
+    margin-left: 50px;
 
     div {
         width: 40px;
@@ -190,7 +191,7 @@ body {
 
 .app__navigation {
     position: absolute;
-    right: -20px;
+    right: 25px;
     top: 35%;
     display: flex;
     justify-content: center;

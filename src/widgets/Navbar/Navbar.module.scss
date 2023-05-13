@@ -89,6 +89,16 @@
     font: var(--font-m);
 }
 
+.btn {
+    background-color: var(--additional-color);
+    padding: 12px 18px;
+    color: white;
+
+    &:hover {
+        background-color: var(--secondary-color);
+    }
+}
+
 @media (max-width: 1199px) {
     .Navbar {
         font: var(--font-xs);

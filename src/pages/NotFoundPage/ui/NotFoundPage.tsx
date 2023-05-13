@@ -1,11 +1,12 @@
 import { memo } from 'react';
 import { classNames } from 'shared/lib/helpers/classNames';
+import { Button } from 'shared/ui/Button/Button';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
 import cls from './NotFoundPage.module.scss';
 
-interface NotFoundPageProps {
-    className?: string;
-}
-
-export const NotFoundPage = memo(({ className }: NotFoundPageProps) => (
-    <div>Страница не найдена</div>
-));
+export const NotFoundPage = () => (
+    <div className={cls.NotFoundPage}>
+        <h1>Страница не найдена</h1>
+        <AppLink to="/">На главную</AppLink>
+    </div>
+);

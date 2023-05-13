@@ -6,7 +6,7 @@ import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
-import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -51,7 +51,9 @@ export const Navbar = ({ className }: NavbarProps) => {
             </div>
             <div className={cls.right}>
                 <p className={cls.number}>+7 916 303-90-62</p>
-                <Button className={cls.btn}>Обсудить проект</Button>
+                <AppLink className={cls.btn} to={RoutePath.contacts}>
+                    Обсудить проект
+                </AppLink>
             </div>
             <div className={cls['app__navbar-menu']}>
                 <HiMenuAlt4
@@ -67,7 +69,11 @@ export const Navbar = ({ className }: NavbarProps) => {
                         <HiX onClick={() => setToggle(false)} />
                         <ul>
                             {navbarLinks.map((link) => (
-                                <AppLink key={link.path} to={link.path}>
+                                <AppLink
+                                    key={link.path}
+                                    to={link.path}
+                                    onClick={() => setToggle(false)}
+                                >
                                     {link.title}
                                 </AppLink>
                             ))}

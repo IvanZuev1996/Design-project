@@ -1,0 +1,17 @@
+.Wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: calc(var(--navbar-height));
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        gap: 160px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        margin-top: calc(var(--navbar-height) + 30px);
+    }
+}
