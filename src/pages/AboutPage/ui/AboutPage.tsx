@@ -37,6 +37,7 @@ const AboutPage = memo(() => {
             <motion.div
                 whileInView={{ opacity: [0, 1] }}
                 transition={{ duration: 0.8, delayChildren: 0.5 }}
+                viewport={{ once: true }}
                 className={cls.logo}
             >
                 <h1>Our Design</h1>

@@ -45,6 +45,7 @@ const ServiceDetails = ({ className }: ServiceDetailsProps) => {
                 <m.div
                     whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                     transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
                     className={cls.textBlock}
                 >
                     <h2>{validate(card?.title)}</h2>
@@ -53,6 +54,7 @@ const ServiceDetails = ({ className }: ServiceDetailsProps) => {
                 <m.div
                     animate={{ opacity: [0, 1] }}
                     transition={{ duration: 1 }}
+                    viewport={{ once: true }}
                 >
                     <Page
                         className={classNames(cls.ServiceDetails, {}, [
@@ -73,6 +75,7 @@ const ServiceDetails = ({ className }: ServiceDetailsProps) => {
                     <m.div
                         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
                         className={cls.linksBlock}
                     >
                         <h2>
@@ -94,6 +97,7 @@ const ServiceDetails = ({ className }: ServiceDetailsProps) => {
                             whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                             transition={{ duration: 0.5 }}
                             className={cls.tag}
+                            viewport={{ once: true }}
                             key={index}
                         >
                             {item}

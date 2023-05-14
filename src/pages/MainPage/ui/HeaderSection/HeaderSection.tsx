@@ -31,6 +31,7 @@ const HeaderSection = ({ className }: HeaderSectionProps) => {
             <motion.div
                 whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
                 className={cls.info}
             >
                 <div className={cls.badge}>
@@ -56,6 +57,7 @@ const HeaderSection = ({ className }: HeaderSectionProps) => {
             <motion.div
                 whileInView={{ opacity: [0, 1] }}
                 transition={{ duration: 0.8, delayChildren: 0.5 }}
+                viewport={{ once: true }}
                 className={cls.mainImage}
             >
                 <img src={images.mainPhoto} alt="desig" className="" />
