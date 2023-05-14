@@ -3,8 +3,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: var(--navbar-height);
 
     @media screen and (max-width: 1200px) {
         margin-top: calc(var(--navbar-height) + 30px);
+    }
+
+    @media screen and (max-width: 370px) {
+        margin-top: calc(var(--navbar-height) + 120px);
     }
 }
