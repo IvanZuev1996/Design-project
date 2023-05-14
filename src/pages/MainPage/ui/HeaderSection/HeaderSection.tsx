@@ -65,6 +65,7 @@ const HeaderSection = ({ className }: HeaderSectionProps) => {
                     whileInView={{ scale: [0, 0.5] }}
                     transition={{ duration: 1, ease: 'easeInOut' }}
                     src={images.circle}
+                    viewport={{ once: true }}
                     alt="profile_circle"
                     className={cls.overlayCircle}
                 />
@@ -72,6 +73,7 @@ const HeaderSection = ({ className }: HeaderSectionProps) => {
 
             <motion.div
                 whileInView={scaleVariants.whileInView}
+                viewport={{ once: true }}
                 className={cls.infoCircles}
             >
                 {technologys.map((item, index) => (

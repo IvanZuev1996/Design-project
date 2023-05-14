@@ -97,6 +97,7 @@ const WorksSection = ({ isMain = false }: WorksSectionProps) => {
                                             ease: 'easeInOut',
                                             staggerChildren: 0.5
                                         }}
+                                        viewport={{ once: true }}
                                         className={cls.workHover}
                                     >
                                         <AppLink

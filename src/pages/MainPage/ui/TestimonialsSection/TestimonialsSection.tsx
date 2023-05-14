@@ -94,6 +94,7 @@ const TestimonialsSection = () => {
                     <motion.div
                         whileInView={{ opacity: [0, 1] }}
                         transition={{ duration: 0.5, type: 'tween' }}
+                        viewport={{ once: true }}
                         key={brand._id}
                     >
                         <img

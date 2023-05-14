@@ -42,6 +42,7 @@ const AboutSection = ({ className }: AboutSectionProps) => {
                         transition={{ duration: 0.2, type: 'tween' }}
                         className={cls.serviceItem}
                         key={item.title + index}
+                        viewport={{ once: true }}
                     >
                         <img
                             src={String(urlFor(item.imgUrl))}

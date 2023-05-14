@@ -34,12 +34,16 @@ const SkillsSection = () => {
             <h2 className={cls.headText}>ПО и наши последние проекты!</h2>
 
             <div className={cls.skillsContainer}>
-                <motion.div className={cls.skillsList}>
+                <motion.div
+                    className={cls.skillsList}
+                    viewport={{ once: true }}
+                >
                     {skills.map((skill) => (
                         <motion.div
                             whileInView={{ opacity: [0, 1] }}
                             transition={{ duration: 0.5 }}
                             className={cls.skillsItem}
+                            viewport={{ once: true }}
                             key={skill._id + skill.name}
                         >
                             <div
@@ -61,18 +65,23 @@ const SkillsSection = () => {
                     {experiences.map((experience) => (
                         <motion.div
                             className={cls.skillsExpItem}
+                            viewport={{ once: true }}
                             key={experience._id + experience.year}
                         >
                             <div className={cls.skillsExpYear}>
                                 <p className="bold-text">{experience.year}</p>
                             </div>
-                            <motion.div className={cls.skillsExpWorks}>
+                            <motion.div
+                                className={cls.skillsExpWorks}
+                                viewport={{ once: true }}
+                            >
                                 {experience.works.map((work) => (
                                     <div key={work._id + work.name}>
                                         <motion.div
                                             whileInView={{ opacity: [0, 1] }}
                                             transition={{ duration: 0.5 }}
                                             className={cls.skillsExpWork}
+                                            viewport={{ once: true }}
                                             data-tip
                                             data-for={work.name}
                                         >
