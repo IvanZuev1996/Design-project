@@ -1,14 +1,15 @@
 .wrapper {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     flex-direction: column;
+    overflow: hidden;
+    margin-top: 100px;
 
     @media screen and (max-width: 768px) {
-        flex-direction: column;
         width: 90vw;
+        margin-top: 0;
     }
 }
 
@@ -18,7 +19,8 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    margin: 4em 2rem 2rem;
+    margin-top: 40px;
+    gap: 40px;
 
     .footerCard {
         min-width: 290px;
@@ -59,11 +61,13 @@
 
     @media screen and (max-width: 768px) {
         width: 100%;
+        gap: 0;
     }
 }
 
 .footerForm {
     width: 60%;
+    height: 60%;
     flex-direction: column;
     margin: 1rem 2rem;
 
