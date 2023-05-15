@@ -1,9 +1,9 @@
 import React, { ChangeEventHandler, useState } from 'react';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { client } from 'client';
 import { images } from 'shared/const';
-import AppWrap from 'widgets/AppWrap/AppWrap';
-import MotionWrap from 'widgets/MotionWrap/MotionWrap';
 import { Link } from 'react-router-dom';
+import { Modal } from 'shared/ui/Modal/Modal';
 import cls from './Footer.module.scss';
 
 interface FormDataType {
@@ -24,6 +24,16 @@ const Footer = () => {
     const [loading, setLoading] = useState<boolean>(false);
 
     const { username, email, message } = formData;
+
+    const onClose = () => {
+        setIsFormSubmitted(false);
+        setFormData({
+            name: '',
+            email: '',
+            message: '',
+            username: ''
+        });
+    };
 
     const handleChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -58,6 +68,17 @@ const Footer = () => {
 
     return (
         <div className={cls.wrapper}>
+            <Modal
+                isOpen={isFormSubmitted}
+                onClose={onClose}
+                className={cls.modal}
+            >
+                <AiOutlineCloseCircle
+                    onClick={onClose}
+                    className={cls.svgIcon}
+                />
+                <p>Спасибо за вашу заявку! Скоро мы свяжемся с вами</p>
+            </Modal>
             <h2 className="head-text">Свяжитесь с нами для заказа!</h2>
 
             <div className={cls.footerCards}>
