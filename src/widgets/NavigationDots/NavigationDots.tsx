@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 
 import 'app/styles/index.scss';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 interface NavigationDotsProps {
     active: string;

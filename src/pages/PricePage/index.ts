@@ -1,3 +1,1 @@
-import { PricePageAsync } from './ui/PricePage.async';
-
-export { PricePageAsync as PricePage };
+export { PricePageAsync as PricePage } from './ui/PricePage.async';

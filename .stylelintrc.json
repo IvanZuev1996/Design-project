@@ -4,6 +4,7 @@
         "indentation": [4],
         "string-quotes": "single",
         "selector-class-pattern": null,
-        "declaration-block-no-duplicate-properties": null
+        "declaration-block-no-duplicate-properties": null,
+        "no-descending-specificity": null
     }
 }

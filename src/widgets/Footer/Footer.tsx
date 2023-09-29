@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, useState } from 'react';
+import React, { useState } from 'react';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { client } from 'client';
 import { images } from 'shared/const';

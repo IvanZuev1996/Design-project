@@ -1,6 +1,6 @@
 import { Page } from 'widgets/Page/Page';
 import { motion } from 'framer-motion';
-import WorksSection from '../../MainPage/ui/WorksSection/WorksSection';
+import WorksSection from '../../MainPage/ui/Sections/WorksSection/WorksSection';
 import cls from './PortfolioPage.module.scss';
 
 const PortfolioPage = () => (
@@ -9,7 +9,6 @@ const PortfolioPage = () => (
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.8, delayChildren: 0.5 }}
             viewport={{ once: true }}
-            className={cls.logo}
         >
             <WorksSection isMain />
         </motion.div>

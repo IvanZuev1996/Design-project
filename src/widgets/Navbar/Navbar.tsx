@@ -1,12 +1,10 @@
 import { classNames } from 'shared/lib/helpers/classNames';
 import Logo from 'shared/assets/icons/Logo.svg';
-import { Button } from 'shared/ui/Button/Button';
 import { useState } from 'react';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {

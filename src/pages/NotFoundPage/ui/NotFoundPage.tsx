@@ -1,6 +1,3 @@
-import { memo } from 'react';
-import { classNames } from 'shared/lib/helpers/classNames';
-import { Button } from 'shared/ui/Button/Button';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import cls from './NotFoundPage.module.scss';
 

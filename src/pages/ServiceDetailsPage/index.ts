@@ -1,3 +1,1 @@
-import { ServiceDetailsPageAsync } from './ui/ServiceDetailsPage.async';
-
-export { ServiceDetailsPageAsync as ServiceDetailsPage };
+export { ServiceDetailsPageAsync as ServiceDetailsPage } from './ui/ServiceDetailsPage.async';

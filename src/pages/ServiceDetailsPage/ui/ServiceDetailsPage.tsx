@@ -56,11 +56,7 @@ const ServiceDetails = ({ className }: ServiceDetailsProps) => {
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
                 >
-                    <Page
-                        className={classNames(cls.ServiceDetails, {}, [
-                            className
-                        ])}
-                    >
+                    <Page className={classNames('', {}, [className])}>
                         {card?.imgUrl && (
                             <img
                                 src={String(urlFor(card?.imgUrl))}

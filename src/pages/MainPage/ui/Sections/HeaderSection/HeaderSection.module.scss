@@ -1,9 +1,10 @@
+/* stylelint-disable no-descending-specificity */
 .HeaderSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    background-image: url('../../../../shared/assets/images/bgIMG.png');
+    background-image: url('../../../../../shared/assets/images/bgIMG.png');
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
@@ -43,7 +44,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin: 0 2rem 2rem 2rem;
+    margin: 0 2rem 2rem;
 
     @media screen and (max-width: 1200px) {
         width: 100%;
@@ -165,7 +166,6 @@
 
     @media screen and (max-width: 1200px) {
         width: 100%;
-        flex-direction: row;
         flex-wrap: wrap;
         margin-left: 0;
 
